@@ -15,7 +15,7 @@ cat("\nTipos de variables:\n")
 str(data_raw)
 
 # Revision filas
-cat("\nPrimeras 6 filas:\n")
+cat("\nPrimeras filas:\n")
 head(data_raw)
 
 cat("\nNA por variable:\n")
@@ -38,7 +38,6 @@ grafico_na <- ggplot(na_summary, aes(x = reorder(variable, pct_missing), y = pct
     subtitle = "Proporción de valores faltantes por variable",
     x = "Variable",
     y = "Porcentaje de NA",
-    caption = "Fuente: World Bank (WDI) – Datos crudos descargados"
   ) +
   geom_text(aes(label = paste0(round(pct_missing, 1), "%")), 
             hjust = -0.1, size = 3) +

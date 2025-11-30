@@ -10,7 +10,7 @@ paises <- WDI::WDI_data$country %>%
   pull(iso2c)
 
 # Indicadores necesarios para el proyecto
-indicadores_raw <- c(
+indicadores <- c(
   "country",                   # Nombre del país
   "iso2c",                     
   "iso3c",                    
@@ -29,7 +29,7 @@ indicadores_raw <- c(
 # Descargar todo
 data_raw <- WDI(
   country = paises,
-  indicator = indicadores_raw,
+  indicator = indicadores,
   extra = FALSE
 )
 
